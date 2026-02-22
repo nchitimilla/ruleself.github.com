@@ -2,47 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy - RuleSelf</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Privacy Policy — RuleSelf</title>
     <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #0F172A;
             color: #E2E8F0;
-            margin: 0;
-            padding: 40px 20px;
-            line-height: 1.6;
+            padding: 48px 20px;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 860px;
+            margin: 0 auto;
             background: #111827;
-            padding: 40px;
-            border-radius: 10px;
+            border-radius: 12px;
+            padding: 52px 56px;
+            border: 1px solid #1E293B;
         }
 
-        h1, h2, h3 {
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: 700;
             color: #3BA6FF;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-tag {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            color: #94A3B8;
+            text-transform: uppercase;
         }
 
         h1 {
-            margin-top: 0;
+            font-size: 30px;
+            font-weight: 700;
+            color: #F1F5F9;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #64748B;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #1E293B;
+            padding-bottom: 28px;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #3BA6FF;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #7DD3FC;
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            color: #CBD5E1;
+            font-size: 15px;
+            margin-bottom: 14px;
         }
 
         ul {
-            margin-left: 20px;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 14px;
+        }
+
+        ul li {
+            color: #CBD5E1;
+            font-size: 15px;
+            padding: 5px 0 5px 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: #3BA6FF;
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: #0F172A;
+            border-left: 3px solid #22C55E;
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin: 18px 0;
+            font-size: 14px;
+            color: #94A3B8;
+        }
+
+        .highlight-box.warning {
+            border-left-color: #F59E0B;
+        }
+
+        .permission-grid {
+            display: grid;
+            gap: 12px;
+            margin: 14px 0;
+        }
+
+        .permission-item {
+            background: #0F172A;
+            border: 1px solid #1E293B;
+            border-radius: 8px;
+            padding: 14px 18px;
+        }
+
+        .permission-item strong {
+            display: block;
+            color: #E2E8F0;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .permission-item span {
+            font-size: 13px;
+            color: #94A3B8;
         }
 
         a {
             color: #3BA6FF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #94A3B8;
+            margin-top: 52px;
+            padding-top: 24px;
+            border-top: 1px solid #1E293B;
+            font-size: 13px;
+            color: #475569;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 32px 24px; }
+            h1 { font-size: 24px; }
         }
     </style>
 </head>
@@ -51,119 +178,178 @@
 
 <div class="container">
 
-<h1>Privacy Policy for RuleSelf</h1>
+    <div class="brand">
+        <div>
+            <div class="brand-name">RuleSelf</div>
+            <div class="brand-tag">Rules, not willpower</div>
+        </div>
+    </div>
 
-<p><strong>Effective Date:</strong> 21 Feb 2026<br>
-<strong>Last Updated:</strong> 21 Feb 2026</p>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+        Effective Date: 21 February 2026 &nbsp;·&nbsp; Last Updated: 21 February 2026
+    </div>
 
-<h2>1. Overview</h2>
-<p>
-RuleSelf is designed with privacy as a core principle.
-RuleSelf does <strong>not collect, store, transmit, or share any personal data</strong> outside of your device.
-All rules, configurations, and app usage detection operate entirely locally on your device.
-</p>
+    <h2>1. Overview</h2>
+    <p>
+        RuleSelf is designed with privacy as a core principle. All rules, configurations, and usage detection
+        operate entirely on your device. RuleSelf does <strong>not collect, store, transmit, or share personal data</strong>
+        through its own servers or infrastructure.
+    </p>
+    <div class="highlight-box">
+        Short version: your data stays on your device. RuleSelf has no backend, no accounts, and no user tracking.
+    </div>
 
-<h2>2. Information We Collect</h2>
-<p><strong>RuleSelf does not collect any personal information.</strong></p>
-<ul>
-    <li>No account registration required</li>
-    <li>No email address collected</li>
-    <li>No name, phone number, or contact data collected</li>
-    <li>No device identifiers collected</li>
-    <li>No location data collected</li>
-    <li>No analytics SDK included</li>
-</ul>
+    <h2>2. Information We Collect</h2>
+    <p><strong>RuleSelf itself does not collect any personal information.</strong></p>
+    <ul>
+        <li>No account registration required</li>
+        <li>No email address, name, or contact information collected</li>
+        <li>No device identifiers collected by RuleSelf directly</li>
+        <li>No location data collected</li>
+        <li>No proprietary analytics SDK included</li>
+    </ul>
+    <p>
+        See <a href="#ads">Section 6 (Advertising)</a> for information about Google AdMob, which is used
+        for free-tier users and operates under Google's own data practices.
+    </p>
 
-<h2>3. Data Storage</h2>
-<p>
-All data (rules, schedules, app selections, custom messages) is stored locally on your device.
-This data never leaves your device and is not accessible to the developer.
-Uninstalling the app removes all stored data.
-</p>
+    <h2>3. Data Storage &amp; Background Tasks</h2>
+    <p>
+        All data you create (rules, schedules, app selections, custom messages) is stored locally on your device
+        using Android's secure local storage. This data is never transmitted to the developer or any third party
+        by RuleSelf. Uninstalling the app removes all locally stored data.
+    </p>
+    <p>
+        RuleSelf uses Android WorkManager to schedule periodic background tasks (such as midnight rule resets).
+        These tasks run locally on your device and do not transmit any data externally.
+    </p>
 
-<h2>4. Permissions Used</h2>
+    <h2>4. Permissions Used</h2>
 
-<h3>Usage Access (PACKAGE_USAGE_STATS)</h3>
-<p>
-Used to detect which app is currently in the foreground and measure usage time or screen unlock counts.
-This data is processed locally and never transmitted.
-</p>
+    <div class="permission-grid">
+        <div class="permission-item">
+            <strong>Usage Access (PACKAGE_USAGE_STATS)</strong>
+            <span>Detects which app is in the foreground and measures usage time or screen unlock counts.
+            Processed locally only. Never transmitted.</span>
+        </div>
+        <div class="permission-item">
+            <strong>Query Installed Apps (QUERY_ALL_PACKAGES)</strong>
+            <span>Displays your installed apps when you create a rule. The app list is never stored externally
+            or shared with anyone.</span>
+        </div>
+        <div class="permission-item">
+            <strong>Display Over Other Apps (SYSTEM_ALERT_WINDOW)</strong>
+            <span>Shows block screens, delay countdowns, and reminder messages over other apps.
+            This permission does not allow data collection.</span>
+        </div>
+        <div class="permission-item">
+            <strong>Notifications</strong>
+            <span>Displays the persistent "Rules Active" status notification and system alerts.</span>
+        </div>
+        <div class="permission-item">
+            <strong>Run at Startup (RECEIVE_BOOT_COMPLETED)</strong>
+            <span>Ensures your rules remain active after the device restarts.</span>
+        </div>
+        <div class="permission-item">
+            <strong>Full-Screen Intent (USE_FULL_SCREEN_INTENT)</strong>
+            <span>Allows block and delay screens to appear as full-screen alerts when a restricted app
+            is launched. Required on Android 10+. Does not allow any data collection.</span>
+        </div>
+        <div class="permission-item">
+            <strong>Foreground Service (FOREGROUND_SERVICE / FOREGROUND_SERVICE_DATA_SYNC)</strong>
+            <span>RuleSelf runs a persistent background monitoring service to continuously detect app usage
+            and enforce your rules while you use your phone. A visible notification is always shown while
+            this service is active. No data is transmitted.</span>
+        </div>
+    </div>
 
-<h3>Installed Apps (QUERY_ALL_PACKAGES)</h3>
-<p>
-Used only to display your installed apps when creating rules.
-No app list is stored or shared externally.
-</p>
+    <h2>5. Internet Usage</h2>
+    <p>
+        RuleSelf does not require an internet connection for core functionality. No cloud sync,
+        no remote databases, and no server communication are performed by RuleSelf itself.
+        Internet access is used only for:
+    </p>
+    <ul>
+        <li>Loading advertisements via Google AdMob (free users only)</li>
+        <li>Processing Premium purchases via Google Play Billing</li>
+    </ul>
 
-<h3>Display Over Other Apps (SYSTEM_ALERT_WINDOW)</h3>
-<p>
-Required to show block screens, delay countdowns, and reminder messages over other apps.
-This permission does not allow data collection.
-</p>
+    <h2 id="ads">6. Advertising (Free Users Only)</h2>
+    <p>
+        Free users of RuleSelf may see banner and rewarded advertisements served by
+        <strong>Google AdMob</strong>. AdMob is a third-party advertising service operated by Google LLC.
+    </p>
+    <div class="highlight-box warning">
+        AdMob may collect device identifiers (such as the Advertising ID / GAID), IP address, and
+        app usage signals for ad personalisation and measurement. This data is handled by Google
+        under their own Privacy Policy — not by RuleSelf.
+    </div>
+    <ul>
+        <li>Rewarded ads are entirely optional and grant one additional rule slot when watched.</li>
+        <li>RuleSelf does not receive, store, or process any ad-related data.</li>
+        <li>You can opt out of personalised ads via your device's Google settings
+            (<em>Settings → Google → Ads → Opt out of Ads Personalisation</em>).</li>
+        <li>Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+    </ul>
+    <div class="highlight-box">
+        Premium users see no advertisements. AdMob is not initialised for Premium users.
+    </div>
 
-<h3>Notifications</h3>
-<p>
-Used to display the persistent “Rules Active” notification and status updates.
-</p>
+    <h2>7. Google Play Billing</h2>
+    <p>
+        If you purchase Premium, payment processing is handled securely by Google Play Billing.
+        RuleSelf does not receive or store your payment card details or billing information.
+        Purchases are governed by Google Play's Terms of Service.
+    </p>
 
-<h3>Run at Startup</h3>
-<p>
-Ensures rules remain active after device reboot.
-</p>
+    <h2>8. Data Sharing</h2>
+    <p>
+        RuleSelf does not share any data with third parties through its own systems.
+        The only third-party data flows are those initiated by Google AdMob (free users) and
+        Google Play Billing (purchasers), both of which are governed by Google's policies.
+    </p>
 
-<h2>5. Internet Usage</h2>
-<p>
-RuleSelf does not require internet for core functionality.
-No cloud sync, no server communication, no remote databases, no advertising SDKs, and no analytics services are used.
-</p>
+    <h2>9. Children's Privacy</h2>
+    <p>
+        RuleSelf is not directed at children under 13. We do not knowingly collect personal information
+        from children. If you believe a child has provided personal information through this App,
+        please contact us so we can take appropriate action.
+    </p>
 
-<h2>6. Third-Party Services</h2>
-<p>
-RuleSelf does not integrate with analytics providers, advertising networks, or tracking SDKs.
-If Premium is purchased, payment processing is handled securely by Google Play Billing.
-RuleSelf does not receive or store payment details.
-</p>
+    <h2>10. Data Security</h2>
+    <p>
+        All rule data is stored using Android's secure local storage mechanisms.
+        Because RuleSelf has no external servers, there is no external exposure risk from
+        RuleSelf's own infrastructure. Device-level security (lock screen, encryption) protects local data.
+    </p>
 
-<h2>7. Data Sharing</h2>
-<p>
-RuleSelf does not share any data with third parties.
-Since no data is collected externally, there is no data to share.
-</p>
+    <h2>11. Your Control</h2>
+    <ul>
+        <li>Delete any rule at any time within the app</li>
+        <li>Revoke permissions at any time via Android Settings</li>
+        <li>Opt out of ad personalisation via Google Settings on your device</li>
+        <li>Uninstall the app to permanently remove all locally stored data</li>
+    </ul>
 
-<h2>8. Children’s Privacy</h2>
-<p>
-RuleSelf does not knowingly collect personal information from anyone, including children under 13.
-</p>
+    <h2>12. Changes to This Policy</h2>
+    <p>
+        If future updates change data practices, this policy will be updated accordingly.
+        The "Last Updated" date at the top of this page will reflect the most recent revision.
+        Continued use of the App after changes are posted constitutes acceptance of the updated policy.
+    </p>
 
-<h2>9. Data Security</h2>
-<p>
-All data is stored using Android’s secure local storage mechanisms.
-Because no external servers are involved, there is no external exposure risk from RuleSelf itself.
-</p>
+    <h2>13. Contact</h2>
+    <p>
+        For questions or concerns about this Privacy Policy, contact:<br>
+        <strong>Nagaraju Chitimilla</strong><br>
+        <a href="mailto:support@ruleself.com">support@ruleself.com</a>
+    </p>
 
-<h2>10. Your Control</h2>
-<ul>
-    <li>Delete rules anytime</li>
-    <li>Disable permissions anytime</li>
-    <li>Uninstall the app to remove all data</li>
-</ul>
-
-<h2>11. Changes to This Policy</h2>
-<p>
-If future updates change data practices, this policy will be updated accordingly.
-The “Last Updated” date will reflect changes.
-</p>
-
-<h2>12. Contact</h2>
-<p>
-If you have questions about this Privacy Policy, contact:<br>
-<strong>Nagaraju Chitimilla</strong><br>
-<strong>Email:</strong> nagaraju.chitimilla@gmail.com
-</p>
-
-<div class="footer">
-RuleSelf is a privacy-first application. No personal data is collected or transmitted.
-</div>
+    <div class="footer">
+        <span>&copy; 2026 RuleSelf &mdash; Nagaraju Chitimilla. All rights reserved.</span>
+        <span><a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
 
 </div>
 
