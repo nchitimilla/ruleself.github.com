@@ -198,7 +198,7 @@ you rely on decisions made in clarity.
 # 🎬 Feature Blue Print
 
 <p align="center">
-  <img src="assets/blueprint.png" width="300"/>
+  <img src="assets/blueprint.png"/>
 </p>
 
 ---
