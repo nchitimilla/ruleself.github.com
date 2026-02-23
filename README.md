@@ -190,6 +190,7 @@ you rely on decisions made in clarity.
   <img src="assets/screenshots/home.png" width="250"/>
   <img src="assets/screenshots/create_rule.png" width="250"/>
   <img src="assets/screenshots/rule_active.png" width="250"/>
+  <img src="assets/screenshots/emergency.png" width="250"/>
 </p>
 
 ---
