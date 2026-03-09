@@ -149,7 +149,7 @@
 
     <h1>Terms &amp; Conditions</h1>
     <div class="meta">
-        Effective Date: 21 February 2026 &nbsp;·&nbsp; Last Updated: 22 February 2026
+        Effective Date: 21 February 2026 &nbsp;·&nbsp; Last Updated: 9 March 2026
     </div>
 
     <h2>1. Acceptance of Terms</h2>
@@ -164,6 +164,25 @@
         The App operates entirely on-device; no account registration is required and no personal data is transmitted
         to external servers.
     </p>
+
+    <h2>2a. Rule Monitor Service</h2>
+    <p>
+        RuleSelf includes a background monitoring service ("Rule Monitor") that can be toggled on or off
+        in <strong>Settings &rarr; Enable Monitoring</strong>. When enabled, the service runs continuously
+        in the background and:
+    </p>
+    <ul>
+        <li>Detects which app is currently in the foreground using Android's Usage Access permission</li>
+        <li>Evaluates your rules in real time against app-open, usage-time, and time-of-day triggers</li>
+        <li>Displays block, delay, or reminder overlays when a rule is triggered</li>
+        <li>Shows a persistent notification while active, as required by Android</li>
+        <li>Automatically restarts after device reboots if previously enabled</li>
+    </ul>
+    <div class="highlight-box">
+        The Monitor Service is essential for rule enforcement. Without it, rules will not be evaluated
+        and no block/delay screens will appear. All processing is local — no usage data is transmitted.
+        You can disable the service at any time from Settings.
+    </div>
 
     <h2>3. Use of the App</h2>
     <ul>
@@ -190,6 +209,13 @@
     <div class="highlight-box">
         Premium users see no advertisements. Upgrading to Premium disables all ad loading.
     </div>
+
+    <h2>5a. Cross-Promotion (Free Users)</h2>
+    <p>
+        When a third-party ad fails to load, the App may display a cross-promotion banner for other apps
+        published by the same developer. Tapping the banner opens the advertised app's Google Play Store listing.
+        Cross-promotion banners do not collect any personal data and are not shown to Premium users.
+    </p>
 
     <h2>6. Premium Purchases</h2>
     <p>

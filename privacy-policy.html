@@ -187,7 +187,7 @@
 
     <h1>Privacy Policy</h1>
     <div class="meta">
-        Effective Date: 21 February 2026 &nbsp;·&nbsp; Last Updated: 22 February 2026
+        Effective Date: 21 February 2026 &nbsp;·&nbsp; Last Updated: 9 March 2026
     </div>
 
     <h2>1. Overview</h2>
@@ -225,6 +225,27 @@
         These tasks run locally on your device and do not transmit any data externally.
     </p>
 
+    <h3>3a. Rule Monitor Service</h3>
+    <p>
+        RuleSelf includes a persistent background monitoring service ("Rule Monitor") that you can enable or
+        disable at any time via <strong>Settings &rarr; Enable Monitoring</strong>. When enabled, the service:
+    </p>
+    <ul>
+        <li>Continuously detects which app is currently in the foreground using Android's UsageStats API</li>
+        <li>Evaluates your configured rules in real time (app-open triggers, usage-time triggers, and
+            time-of-day schedules)</li>
+        <li>Executes the corresponding action (block, delay, or show message) by displaying an on-screen
+            overlay when a rule is triggered</li>
+        <li>Displays a persistent "Rules Active" notification while running, as required by Android for
+            foreground services</li>
+        <li>Automatically restarts after device reboots if it was enabled before the reboot</li>
+    </ul>
+    <div class="highlight-box">
+        The Monitor Service processes all data entirely on your device. It does <strong>not</strong> record,
+        store, or transmit your app usage history, screen time statistics, or any other behavioural data.
+        No logs or analytics are sent externally. You can stop the service at any time from Settings.
+    </div>
+
     <h2>4. Permissions Used</h2>
 
     <div class="permission-grid">
@@ -257,7 +278,7 @@
             is launched. Required on Android 10+. Does not allow any data collection.</span>
         </div>
         <div class="permission-item">
-            <strong>Foreground Service (FOREGROUND_SERVICE / FOREGROUND_SERVICE_DATA_SYNC)</strong>
+            <strong>Foreground Service (FOREGROUND_SERVICE / FOREGROUND_SERVICE_SPECIAL_USE)</strong>
             <span>RuleSelf runs a persistent background monitoring service to continuously detect app usage
             and enforce your rules while you use your phone. A visible notification is always shown while
             this service is active. No data is transmitted.</span>
@@ -272,8 +293,17 @@
     </p>
     <ul>
         <li>Loading advertisements via Google AdMob (free users only)</li>
+        <li>Loading cross-promotion house ads when AdMob is unavailable (see <a href="#crosspromo">Section 6a</a>)</li>
         <li>Processing Premium purchases via Google Play Billing</li>
+        <li>Checking for available app updates via the Google Play In-App Update API</li>
     </ul>
+    <div class="highlight-box">
+        <strong>In-App Update Check:</strong> When you launch RuleSelf, the app may query the
+        Google Play Store to check whether a newer version is available. If a newer version is
+        found, a non-intrusive dialog offers you the option to upgrade or dismiss. No personal
+        data is collected as part of this check; it is a standard Google Play API call using
+        your device's existing Play Store session.
+    </div>
 
     <h2 id="ads">6. Advertising (Free Users Only)</h2>
     <p>
@@ -295,6 +325,27 @@
     <div class="highlight-box">
         Premium users see no advertisements. AdMob is not initialised for Premium users.
     </div>
+
+    <h2 id="crosspromo">6a. Cross-Promotion (Free Users Only)</h2>
+    <p>
+        When Google AdMob fails to load a banner ad, RuleSelf may display a cross-promotion
+        banner for other apps published by the same developer. This feature works as follows:
+    </p>
+    <ul>
+        <li>A small JSON file listing promoted apps is fetched from a developer-hosted static page
+            (<code>nchitimilla.github.io</code>) over HTTPS.</li>
+        <li>This JSON is cached locally on your device for up to 3 hours to minimise network requests.</li>
+        <li>App icon images referenced in the JSON are loaded via Glide from their respective URLs.</li>
+        <li>Tapping a cross-promotion banner opens the advertised app's Google Play Store listing.</li>
+    </ul>
+    <div class="highlight-box">
+        No personal data, device identifiers, or usage analytics are collected or transmitted
+        as part of cross-promotion. The fetch is a simple HTTPS GET request to a static JSON file;
+        no cookies, tokens, or tracking parameters are sent.
+    </div>
+    <p>
+        Cross-promotion is not shown to Premium users because all ad surfaces are disabled for Premium.
+    </p>
 
     <h2>7. Google Play Billing</h2>
     <p>
